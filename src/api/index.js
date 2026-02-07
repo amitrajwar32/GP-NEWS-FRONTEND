@@ -5,6 +5,7 @@ export const authAPI = {
     console.log('Attempting login with:', email);
     return axiosInstance.post('/auth/login', { email, password });
   },
+  changeEmail: (newEmail, password) => axiosInstance.put('/auth/change-email', { newEmail, password }),
   changePassword: (oldPassword, newPassword) => axiosInstance.put('/auth/change-password', { oldPassword, newPassword }),
 };
 

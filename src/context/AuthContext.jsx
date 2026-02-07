@@ -50,12 +50,20 @@ export const AuthProvider = ({ children }) => {
     delete axiosInstance.defaults.headers.common['Authorization'];
   };
 
+  const changeEmail = async (newEmail, password) => {
+    await authAPI.changeEmail(newEmail, password);
+    // Update user email in context and localStorage
+    const updatedUser = { ...user, email: newEmail };
+    setUser(updatedUser);
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+  };
+
   const changePassword = async (oldPassword, newPassword) => {
     await authAPI.changePassword(oldPassword, newPassword);
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, loading, login, logout, changePassword, isAuthenticated: !!token }}>
+    <AuthContext.Provider value={{ user, token, loading, login, logout, changeEmail, changePassword, isAuthenticated: !!token }}>
       {children}
     </AuthContext.Provider>
   );
