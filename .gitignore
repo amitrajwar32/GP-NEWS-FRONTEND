@@ -1,0 +1,89 @@
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+.env*.private
+.env.vault
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# IDE specific
+.code-workspace
+.vscode/settings.json
+.vscode/extensions.json
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# Build files
+/dist
+/build
+/out
+*.tgz
+
+# Cache
+.next/
+.nuxt/
+.cache/
+.eslintcache
+.stylelintcache
+.vuepress/dist
+
+# Security & Credentials
+*.pem
+*.key
+*.crt
+*.cer
+.aws/
+.ssh/
+credentials
+*.pfx
+
+# Lock files (optional - commit if needed)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Misc
+.turbo
+.env.example.*.ignore
+config.local.*
+settings.local.*
+.fusebox/
+.dynamodb/
+.tern-port
+
